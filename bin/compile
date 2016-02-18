@@ -12,7 +12,7 @@ bp_dir=$(cd $(dirname $0); cd ..; pwd)
 # Fix leak
 unset GIT_DIR
 
-GIT_REV=$(tail -1 "$DOKKU_ROOT/$APP/.dokku-git-rev")
+GIT_REV=$(tail -1 "$DOKKU_ROOT/$1/.dokku-git-rev")
 
 # Load some convenience functions like status(), echo(), and indent()
 source $bp_dir/bin/common.sh
